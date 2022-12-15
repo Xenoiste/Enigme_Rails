@@ -1,28 +1,35 @@
 <div class="enigmeDiv">
 
   <h1 class="titreEnigme">
-    Mathématiques
+    CSS
   </h1>
   <p class="enonceEnigme">
-    Combien font 1+1 ?
+    Complétez cette classe CSS pour que le bouton soit visible
   </p>
-
-  <h1>New Article</h1>
+  <div>
+    .boutonSuivant{<br>
+    <div style="margin-left: 10px">
+      visibility: hidden;
+    </div>
+    <br>
+    }
+  </div>
 
   <%= form_with do |form| %>
     <div>
-      <%= form.label :title %><br>
-      <%= form.text_field :title %>
+      <%= form.label :reponse %><br>
+      <%= form.text_area :reponse %>
     </div>
-
     <div>
-      <%= form.label :body %><br>
-      <%= form.text_area :body %>
+      <%= form.submit :envoyer%>
     </div>
-
-    <div>
-      <%= form.submit %>
-    </div>
+  <% end %>
+  <% if @avoirBon.present? %>
+    <% if @avoirBon%>
+      <a href="http://spring.enigmatica.com" class="btn btn-success">Suivant</a>
+    <% else %>
+      <div><%= @reponse.inspect %> est une mauvaise réponse</div>
+    <% end %>
   <% end %>
 
 
