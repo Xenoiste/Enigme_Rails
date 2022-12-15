@@ -1,0 +1,32 @@
+<div class="enigmeDiv">
+
+  <h1 class="titreEnigme">
+    Mathématiques
+  </h1>
+  <p class="enonceEnigme">
+    Combien font 1+1 ?
+  </p>
+
+  <h1>New Article</h1>
+
+  <%= form_with do |form| %>
+    <div>
+      <%= form.label :title %><br>
+      <%= form.text_field :title %>
+    </div>
+
+    <div>
+      <%= form.label :body %><br>
+      <%= form.text_area :body %>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+
+
+  <!--  <form>-->
+<!--    <button type="submit" class="envoyerBouton">Envoyer</button>-->
+<!--  </form>-->
+</div>

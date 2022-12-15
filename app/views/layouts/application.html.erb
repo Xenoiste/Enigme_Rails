@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruby</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav class="navbar">
+
+      <a class="navbar-brand" href="#">
+        <img class="imageLogo " src="images/LogoSansNom.svg" alt="Logo" height="50px">
+      </a>
+      <p class="titreHeader">Enigmatica</p>
+    </nav>
+    <div class="figure">
+      <img class="imageAssistante" src="images/assistante2.svg" alt="assistante" height="300px">
+      <img class="imageAssistanteIdee" src="images/assistanteIdee.svg=" alt="assistante" height="300px">
+    </div>
+    <%= yield %>
+  </body>
+</html>

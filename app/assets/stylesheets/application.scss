@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ * =require_tree .
+ * =require_self
+ */
+
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap";
+
+@font-face {
+  font-family: nordicFont;
+  src: url("/assets/polices/nordicalt.ttf");
+}
+
+.titreHeader{
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  position:absolute;
+  margin-right:auto;
+  margin-left:auto;
+  font-family: nordicFont, sans-serif;
+
+}
+
+.titreEnigme{text-align: center;}
+
+.enigmeDiv{
+  margin: 10vh 25vw;
+  //background-color: #50515a;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 1px 2px #232428;
+}
+.enonceEnigme{
+  text-align:center;
+
+}
+body{
+  background-color: #303134;
+
+  //background-image:url("/public/images/assistante.svg");
+  //background-position:bottom right;
+  //background-repeat:no-repeat;
+}
+
+
+.form-control{
+  background-color: #ffffff;
+  border: 1px solid #232428;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px #232428;
+  width:50%;
+  margin-left:25%;
+}
+
+.envoyerBouton{
+  background-color: #999999;
+  color: #232428;
+  border: 1px solid #232428;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px #232428;
+  width:50%;
+  margin-left:25%;
+  margin-top: 10px;
+}
+
+.navbar{
+  background-color: #1f1f1f;
+}
+
+.envoyerBouton:hover{
+  background-color: #333438;
+  color: #999999;
+}
+
+.figure{
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:20%;
+  height: 300px;
+}
+
+.figure img.imageAssistanteIdee {
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  object-fit: contain;
+  opacity: 0;
+  transition:opacity .3s;
+}
+
+//.figure img.imageAssistante{
+//    height: 65%;
+//}
+
+.figure:hover img.imageAssistante{
+  opacity: 0;
+}
+.figure:hover img.imageAssistanteIdee{
+  opacity: 1;
+  //height:110%;
+}
+
+.registerDiv{
+  margin: 10vh 25vw;
+  //background-color: #50515a;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 1px 2px #232428;
+}
